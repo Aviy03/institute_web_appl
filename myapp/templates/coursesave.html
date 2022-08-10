@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Add Course</title>
+<style>
+    div.absolute{
+        position: absolute;
+        width:300px;
+        right: 50px;
+        left: 500px;
+        top: 60px;
+        height: 400px;
+        padding: 40px 50px 50px 80px;
+        margin: 50px ;
+        border-radius: 25px;
+        background-color:lightgoldenrodyellow ;
+        box-shadow: 0px 0px 15px lightcoral;
+    }
+    body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  justify-content: space-between;
+  /*margin: -20px 0 22px 0;*/
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  margin-left: -20px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+</style>
+</head>
+<body style="background-color:linear-gradient(135deg, lightblue, purple);">
+    <div class="absolute">
+<form name="myf" action="/CoursedataSave/" method="post">
+    <b>
+        <div class="user-details">
+          <h2 style="align-self: center;">Add Course</h2>
+            
+            <div class="input-box">
+                <span class="details">Course-ID</span>
+                <input type="number" name="cid"placeholder="Enter Course-ID" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Course Name</span>
+                <input type="text" name="cname"placeholder="Enter Course Name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Duration</span>
+                <input type="number"name="cdur" placeholder="Enter Course Duration" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Course Fee</span>
+                <input type="number" name="cfee"placeholder="Enter Course Fee" required>
+              </div>
+              <div class="button">
+                <input type="submit">
+              </div>
+   </b>
+
+
+</form>
+</div>
+</body>
+</html>

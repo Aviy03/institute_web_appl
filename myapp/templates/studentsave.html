@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{% static 'E:/newpro/project/static/css/studsavestyle.css' %}">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Student Registration Form </title> 
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select >
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="Password" placeholder="Enter your Password" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Course Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Course-Name </label>
+                            <select >
+                                <option disabled selected>Select Course</option>
+                                {% for student in student_number %}
+                                <option>{{ student.coursename}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+<!--                         <div class="input-field">
+                            <label>Course Name</label>
+                            <input type="text" placeholder="Enter Course Name" >
+                        </div> -->
+
+                        <div class="input-field">
+                            <label>Issued Authority</label>
+                            <input type="text" value="IIT Bichpuri" readonly />
+                        </div>
+
+                        <div class="input-field">
+                            <label>Institute Center</label>
+                            <select >
+                                <option disabled selected>Select Institute Center</option>
+                                <option>Agra</option>
+                                <option>New Delhi</option>  
+                            </select>
+                        </div>
+<!-- 
+                        <div class="input-field">
+                            <label>Issued Date</label>
+                            <input type="date" placeholder="Enter your issued date" >
+                        </div> -->
+
+                        <div class="input-field">
+                            <label>Starting Date</label>
+                            <input type="date" placeholder="Enter Starting date" required>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <select >
+                                <option disabled selected>Select Address Type</option>
+                                <option>Permanent</option>
+                                <option>Temporary</option>  
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" placeholder="Enter nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter your state" required>
+                        </div>
+<!-- 
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" placeholder="Enter your district" required>
+                        </div> -->
+
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input type="text" placeholder="Enter Address" required>
+                        </div>
+                    </div>
+                </div>
+
+<!--                 <div class="details family">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text" placeholder="Enter father name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter mother name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text" placeholder="Enter grandfther name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text" placeholder="Father in law name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" placeholder="Mother in law name" required>
+                        </div>
+                    </div>
+ -->
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Proceed to Pay</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'E:/newpro/project/static/js/studsavescript.js' %}"></script>
+</body>
+</html>

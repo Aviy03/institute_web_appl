@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<title>Delete Course</title>
+<style>
+    div.absolute{
+        position: absolute;
+        width:300px;
+        right: 50px;
+        left: 500px;
+        top: 60px;
+        height: 300px;
+        padding: 60px 60px 50px 80px;
+        margin: 50px ;
+        border-radius: 25px;
+        background-color:lightgoldenrodyellow ;
+        box-shadow: 0px 0px 15px lightcoral;
+    }
+    body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+</style>
+</head>
+<body>
+<h1>Employee Delete</h1>
+<form name="myf" action="/coursedelete/" method="post">
+    <div class="absolute">
+        <div class="user-details">
+             <b>   
+            <div class="input-box">
+                <span class="details">Enter Course ID</span>
+                <input type="number" name="cid"placeholder="Enter Course ID" required>
+              </div>
+              <div class="button"><input type="submit" value="Delete"></b>
+            </div>
+    </div>
+
+</form>
+
+</body>
+</html>

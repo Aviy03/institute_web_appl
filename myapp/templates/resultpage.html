@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>result</title>
+</head>
+<body>
+<table border='2' width='100%'>
+    <tr style='color:pink;'>
+	    <th>Course no</th>
+	    <th>Course Name</th>
+	    <th>Duration</th>
+    	<th>fees</th>
+    </tr>
+    <tr>
+    {% for student in student_number %}
+        <td>{{ student.courseno}}</td>
+        <td>{{ student.coursename }}</td>
+        <td>{{ student.duration }}</td>
+        <td>{{ student.fees }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/admincourse/">Go back</a>
+</body>
+</html>
